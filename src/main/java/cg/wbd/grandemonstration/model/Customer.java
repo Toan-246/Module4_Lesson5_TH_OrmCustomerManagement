@@ -1,6 +1,11 @@
 package cg.wbd.grandemonstration.model;
 
+import javax.persistence.*;
+
+@Entity
 public class Customer implements Cloneable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String email;

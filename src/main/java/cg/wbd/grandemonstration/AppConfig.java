@@ -1,7 +1,7 @@
 package cg.wbd.grandemonstration;
 
 import cg.wbd.grandemonstration.service.CustomerService;
-import cg.wbd.grandemonstration.service.impl.SimpleCustomerServiceImpl;
+import cg.wbd.grandemonstration.service.impl.HibernateCustomerServiceImpl;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -50,8 +50,4 @@ public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
         return templateResolver;
     }
 
-    @Bean
-    public CustomerService customerService() {
-        return new SimpleCustomerServiceImpl();
-    }
 }
